@@ -13,9 +13,10 @@ $(document).ready(function(){
                     var dropdown_options = $(event.target).attr('dropdown-field');
                     var y = event.pageY
                     var x = event.pageX
+                    var offest_origin = $(event.target).offset()
                     $(event.target).toggleClass("button button-down");
                     $("#body").append("<div class='dropdown'>" + dropdown_options + "</div>");
-                    $('.dropdown').css({left: x, top: y})
+                    $('.dropdown').css({left: offest_origin.left , top: offest_origin.top + 65})
                     return false
                 }
             })  

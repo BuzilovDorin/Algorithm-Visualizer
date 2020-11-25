@@ -55,6 +55,15 @@ html, body {
     color: #f7f7f7;
     background-color: #638a64;
     border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    outline: none;
+}
+#Run-Algorithim:hover {
+    background-color: #719972;
+}
+#Run-Algorithim:active {
+    background-color: #536d53;
+    box-shadow: none
 }
 #navbar-footer {
     width: 100%;
@@ -111,6 +120,7 @@ html, body {
     padding-right: 60px;
     margin-left: -40px;
     background-color: tomato;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #page-divider{
