@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src='functional.js'></script>
+</head>
+<body id='body'>
+    <!-- Navigation Top-bar -->
+    <nav id="navbar">
+        <img src="/Images/SearchAlgo-icon.png" id="navbar-icon"></img>
+        <h1 id="navbar-header">Algorithm Visualizer</h1>
+        <!-- Navbar options -->
+        <div id="navbar-options">
+            <a class="button" dropdown-field="<ul>
+                <li>
+                    Dikstraja's
+                </li>
+                <li>
+                    A*
+                </li>
+            </ul>">
+            Algorithims<img src="/Images/play.png" id="choose-algo-icon"></img></a>
+            <span id="spacer">  </span>  
+            <a id="choose-patterns" class="button">Mazes & Patterns<img src="/Images/play.png" id="choose-algo-icon"></img></a>
+            <span id="spacer"></span>
+            <a class="button-1-click" >Clear Board</a>
+        </div>
+        <button id="Run-Algorithim">  Visualize! </button>
+        <div id="navbar-footer"></div>
+    </nav> 
+
+    <!-- Algorithim Descriptor & graph options -->
+    <div id="page-divider">
+        <div id="section-1">
+            <div id="section-1a">
+                <div id="algorithim-descript">
+                    Pick an Algorithm to visualise it!
+                </div>
+                <div id="grid-options">
+                    <img src="/Images/gamer.png" id="algo-img"><strong><em>Start Node</em></strong> <span id="spacer"></span></img>
+                    <img src="/Images/cherry.png" id="algo-img"><strong><em>End Node</em></strong> <span id="spacer"></span></img>
+                    <img src="/Images/lover.png" id="algo-img" tooltip="Hold [SHIFT] + [H] to add a heart to your algorithim search. The algorithm will prioritize finding the heart first and then will continue to look for the end node."><strong><em>Add Extra Life</em></strong> <span id="spacer"></span></img>
+                    <img src="/Images/weight.png" id="algo-img" tooltip="Hold [SHIFT] + [W] to add weights to your algorithim search. Walls are impassable, weights however are not impassable. They simply cost more resources to move through."><strong><em>Add Weight Node</em></strong> <span id="spacer"></span></img>
+                    <img src="/Images/unvisited.png" id="algo-img"><strong><em>Unvisited Node</em></strong> <span id="spacer"></span></img>
+                    <img src="/Images/shortest-path.png" id="algo-img"><strong><em>Shortest Path</em></strong> <span id="spacer"></span></img>
+                    <img src="/Images/wall.png" id="algo-img"><strong><em>Wall Node</em></strong> <span id="spacer"></span></img>
+                </div>
+            </div>
+            <div id="section-1b">
+                <table id="grid">
+                </table>
+            </div>
+        </div>
+        <div id="section-2">
+            <div id="search-tree-header"><em>Search Tree</em></div>
+        </div>
+    </div>
+</body>
+</html>
