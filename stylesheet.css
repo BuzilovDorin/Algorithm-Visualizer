@@ -59,11 +59,12 @@ html, body {
     outline: none;
 }
 #Run-Algorithim:hover {
-    background-color: #719972;
+    background-color: #6b976e;
+    cursor: pointer;	
 }
 #Run-Algorithim:active {
     background-color: #536d53;
-    box-shadow: none
+    box-shadow: none;	
 }
 #navbar-footer {
     width: 100%;
@@ -78,8 +79,21 @@ html, body {
     padding: 0px 10px;
 }
 .button-1-click:hover{
-    color: tomato;
-    padding: 20px 10px;
+    background-color: rgb(40, 66, 94);
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    outline: none;
+    border-radius: 4px;
+    padding: 6px 10px;
+    cursor: pointer;	
+}
+.button-1-click:active{
+    background-color: rgb(31, 54, 83);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.102), 0 6px 20px 0 rgba(0, 0, 0, 0.102);
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    padding: 6px 10px;
 }
 .button {
     padding: 0px 10px;
@@ -87,11 +101,14 @@ html, body {
 .button:hover{
     color: tomato;
     padding: 20px 10px;
+    cursor: pointer;	
 }
 .button-down {
     color: #f7f7f7;
     background-color: tomato;
     padding: 20px 10px;
+    background: linear-gradient(to top, tomato 50%, rgb(31, 54, 83) 100%);
+    background-size: 250% 100%;
 }
 .dropdown {
     z-index: 0;
@@ -121,6 +138,9 @@ html, body {
     margin-left: -40px;
     background-color: tomato;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: linear-gradient(to left, tomato 80%, rgb(31, 54, 83) 120%);
+    background-size: 200% 100%;
+    cursor: pointer;	
 }
 
 #page-divider{
@@ -247,6 +267,7 @@ html, body {
     background-size: 100%;
 }
 .start-node:hover, .end-node:hover {
+    cursor: pointer;	
     transition: all .25s ease-out;
     transform: scale(1.5);
     border-radius: 5px;
