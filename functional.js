@@ -9,7 +9,7 @@ $(document).ready(function(){
             $('.button').click(function(event){
                 $('.dropdown').remove();
                 $('.button-down').toggleClass("button-down button");
-                if ($(event.target).attr("id=choose-algo-icon")){
+                if (!$(event.target).attr("id")) {
                     var dropdown_options = $(event.target).attr('dropdown-field');
                     var y = event.pageY
                     var x = event.pageX
@@ -18,7 +18,7 @@ $(document).ready(function(){
                     $('.dropdown').css({left: x, top: y})
                     return false
                 }
-            })
+            })  
         }
     })
 
