@@ -52,6 +52,10 @@ $(document).ready(function(){
         currentCell = null
     })
 
+    $(".button-1-click").click(function(e){
+        $('.wall').toggleClass(("unvisited wall"))
+    })
+
 
     // Let tooltip follow cursor when hovering over icon
     $('[tooltip]').mousemove(function(event){
