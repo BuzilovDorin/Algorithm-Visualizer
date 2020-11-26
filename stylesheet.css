@@ -178,6 +178,13 @@ html, body {
     color: #6b976e;
     height: 90%;
 }
+.subtext {
+    font-size: 20px;
+}
+.subtextExample {
+    color: #6b976e;
+    font-size: 16px;
+}
 #grid-options {
     padding-left: 50px;
 }

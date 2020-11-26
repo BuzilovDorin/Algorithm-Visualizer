@@ -14,8 +14,6 @@ $(document).ready(function(){
                 $('.button-down').toggleClass("button-down button");
                 if (!$(event.target).attr("id")) {
                     var dropdown_options = $(event.target).attr('dropdown-field');
-                    var y = event.pageY
-                    var x = event.pageX
                     var offest_origin = $(event.target).offset()
                     $(event.target).toggleClass("button button-down");
                     $("#body").append("<div class='dropdown'>" + dropdown_options + "</div>");
@@ -26,6 +24,16 @@ $(document).ready(function(){
         }
     })
 
+    // Choosing Algorithim
+    $(document).click(function(e){
+        if ($(e.target).attr("class") == "Dijkstra"){
+            $("#algorithim-descript").empty();
+            $("#algorithim-descript").append("Dijkstra's Algorithim <br></br><div class='subtext'>This is the description of the algorithim</div> <br></br> <div class='subtextExample'>Example: A real world example or use case is given in this section</div>");
+            $("#algorithim-descript").css ( 'color', "rgb(31, 54, 83)" )
+        }
+    })
+
+    // Create and remove walls with mousemove
     mouseDrag = false;
     currentCell = null;
     $(document)
@@ -52,10 +60,10 @@ $(document).ready(function(){
         currentCell = null
     })
 
+    // Clear whole board
     $(".button-1-click").click(function(e){
         $('.wall').toggleClass(("unvisited wall"))
     })
-
 
     // Let tooltip follow cursor when hovering over icon
     $('[tooltip]').mousemove(function(event){
