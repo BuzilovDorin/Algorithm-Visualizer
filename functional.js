@@ -1,7 +1,10 @@
 $(document).ready(function(){
+    // Generate Grid on page load
     generateGrid(41, 75);
+    // Set start & end nodes on page load
     $('#20-10').toggleClass('unvisited start-node').attr('tooltip', 'Row: 20, Column: 10');
     $('#20-60').toggleClass('unvisited end-node').attr('tooltip', 'Row: 20, Column: 60');  
+    // Toggle navbar drop down menus
     $(document).click(function(e){
         $('.dropdown').remove();
         $('.button-down').toggleClass("button-down button");
@@ -23,6 +26,34 @@ $(document).ready(function(){
         }
     })
 
+    mouseDrag = false;
+    currentCell = null;
+    $(document)
+    .mousedown(function(e) {
+        if ($(e.target).is(".unvisited , .wall")) {
+            $(e.target).toggleClass("unvisited wall")
+            currentCell = $(e.target).attr("id")
+            mouseDrag = true
+        }
+    })
+    .mousemove(function(e) {
+        e.preventDefault()
+        if(mouseDrag ==  true) {
+            if ($(e.target).attr("id") != currentCell){
+                if ($(e.target).is(".unvisited , .wall")) {
+                    $(e.target).toggleClass("unvisited wall")
+                    currentCell = $(e.target).attr("id")
+                }
+            }
+        }
+    })
+    .mouseup(function(e) {
+        mouseDrag = false
+        currentCell = null
+    })
+
+
+    // Let tooltip follow cursor when hovering over icon
     $('[tooltip]').mousemove(function(event){
     var tooltip_text = $(event.target).attr('tooltip');
         if ($(".tooltip").length <= 0) {

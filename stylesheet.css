@@ -53,13 +53,13 @@ html, body {
     letter-spacing: 0.01em;
     padding: 5px 20px;
     color: #f7f7f7;
-    background-color: #638a64;
+    background-color: #679c6b;
     border: none;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     outline: none;
 }
 #Run-Algorithim:hover {
-    background-color: #6b976e;
+    background-color: #78a17a;
     cursor: pointer;	
 }
 #Run-Algorithim:active {
@@ -68,7 +68,7 @@ html, body {
 }
 #navbar-footer {
     width: 100%;
-    background-color: tomato;
+    background-color: rgb(99, 71, 255);
     height: 10px;
     transform: translateY(50px);
 }
@@ -76,10 +76,17 @@ html, body {
     padding-right: 50px;
 }
 .button-1-click {
+    color: rgba(103, 238, 121, 0.801);
+    background-color: rgb(40, 66, 94);
     padding: 0px 10px;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    outline: none;
+    border-radius: 4px;
+    padding: 6px 10px;
 }
 .button-1-click:hover{
-    background-color: rgb(40, 66, 94);
+    background-color: rgb(45, 73, 104);
     border: none;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     outline: none;
@@ -99,16 +106,17 @@ html, body {
     padding: 0px 10px;
 }
 .button:hover{
-    color: tomato;
+    color: rgba(200, 202, 201, 0.801);
     padding: 20px 10px;
-    cursor: pointer;	
+    cursor: pointer;
 }
 .button-down {
     color: #f7f7f7;
-    background-color: tomato;
+    background-color:rgb(99, 71, 255);
     padding: 20px 10px;
-    background: linear-gradient(to top, tomato 50%, rgb(31, 54, 83) 100%);
+    background: linear-gradient(to top, rgb(99, 71, 255) 50%, rgb(31, 54, 83) 100%);
     background-size: 250% 100%;
+    cursor: pointer;
 }
 .dropdown {
     z-index: 0;
@@ -130,15 +138,16 @@ html, body {
     padding: 10px;
     padding-right: 40px;
     margin-left: -20px;
+    letter-spacing: 0.1px;
 }
 .dropdown > ul > li:hover {
     padding-bottom: 20px;
     padding: 10px;
     padding-right: 60px;
     margin-left: -40px;
-    background-color: tomato;
+    background-color:rgb(99, 71, 255);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background: linear-gradient(to left, tomato 80%, rgb(31, 54, 83) 120%);
+    background: linear-gradient(to left, rgb(99, 71, 255) 80%, rgb(31, 54, 83) 120%);
     background-size: 200% 100%;
     cursor: pointer;	
 }
@@ -166,7 +175,7 @@ html, body {
     padding-top: 20px;
     font-size: 32px;
     font-weight: 600;
-    color: tomato;
+    color: #6b976e;
     height: 90%;
 }
 #grid-options {
@@ -211,7 +220,7 @@ html, body {
     padding-top: 3%;
     font-size: 26px;
     font-weight: 600;
-    color: tomato;
+    color: #6b976e;
 }
 
 /* Grid */
@@ -252,12 +261,15 @@ html, body {
 #grid > tr > :last-child{
     border-right-color: rgb(159, 198, 247)
 }
+#grid > tr > td.wall {
+    background-color: black;
+    border:black;
+}
 
 /* Search Styles */
 .start-node {
     background-image: url(/Images/gamer.png);
-    background-repeat: no-
-    repeat;
+    background-repeat: no-repeat;
     background-size: 125%;
     background-position: -5px;
 }
