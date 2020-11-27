@@ -28,8 +28,8 @@ $(document).ready(function(){
     $(document).click(function(e){
         if ($(e.target).attr("class") == "Dijkstra"){
             $("#algorithim-descript").empty();
-            $("#algorithim-descript").append("Dijkstra's Algorithim <br></br><div class='subtext'>This is the description of the algorithim</div> <br></br> <div class='subtextExample'>Example: A real world example or use case is given in this section</div>");
-            $("#algorithim-descript").css ( 'color', "rgb(31, 54, 83)" )
+            $("#algorithim-descript").append("Dijkstra's Algorithim <br></br><div class='subtext'>Assign all nodes on the grid a distance value of infinity[∞]; in relation to the start node. Assign the start node a distance value of [0]. Dijkstra's algorithm will begin by visiting the start node. Dijkstra's goal is to measure the current node's distance from the start, then update all the neighbouring nodes (Nodes: up, right, left, down) a distance value of [+1]. Pick the node with the smallest distance value to traverse next. Like you did before update its distance value and the neighbours values too. Then find the next node with the smallest distance value and traverse it. Keep repeating until you reach the end goal. <br></br></div> <div class='subtextExample'>Example: Calculating the best route through a city would be one application of Dijkstra's algorithm. Areas of high traffic can be weighted to avoid taking certain routes.</div> <button id='example_button_weighted' class='dijkstra_weighted_example'> Weighted example </button> <button id='example_button_unweighted' class='dijkstra_unweighted_example'> Unweighted example </button>");
+            $("#algorithim-descript").css ( 'color', "black" )
         }
     })
 
