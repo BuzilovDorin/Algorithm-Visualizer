@@ -39,17 +39,48 @@ $(document).ready(function(){
     currentCell = null;
     heart = null;
     weight = null;
-    document.onkeypress = function(e) {
-        if (e.key == "w"){
-            weight = true;
+    // document.onkeypress = function(e) {
+    //     if (e.key == "w" & e.key == "t"){
+    //         alert("true")
+    //         weight = true;
+    //     }
+    // };
+    // $(document).on('keyup', function() {
+    // })
+    // document.onkeyrelease = function(e) {
+    //     heart = null;
+    //     weight = null;
+    // };
+
+    var pressedKeys = {};
+
+    function checkPressedKeys() {
+        var shiftPressed=false, ctrlPressed=false, aPressed=false;
+        for (var i in pressedKeys) {
+            if (!pressedKeys.hasOwnProperty(i)) continue;
+            if(i==16){
+                shiftPressed=true;
+            }
+            else if(i==87){
+                aPressed=true;
+            }
         }
-    };
-    $(document).on('keyup', function() {
-    })
-    document.onkeyrelease = function(e) {
-        heart = null;
-        weight = null;
-    };
+        if(shiftPressed & aPressed){
+            console("works")
+        }
+    }
+
+
+    $(document).ready(function(){
+        $(document).keydown(function (e) {
+            pressedKeys[e.which] = true;
+            checkPressedKeys();
+        });
+
+        $(document).keyup(function (e) {
+            delete pressedKeys[e.which];
+        });
+    });
     $(document)
     .mousedown(function(e) {
         // If shift key is pressed && W || H then...
