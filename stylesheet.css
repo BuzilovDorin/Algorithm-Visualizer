@@ -348,6 +348,18 @@ html, body {
     transform: scale(1.5);
     border-radius: 5px;
 }
+.heart-node {
+    background-image: url(/Images/lover.png);
+    background-repeat: no-repeat;
+    background-size: 125%;
+    background-position: -5px;
+}
+.weight-node {
+    background-image: url(/Images/weight.png);
+    background-repeat: no-repeat;
+    background-size: 125%;
+    background-position: -5px;
+}
 .shortest-path{
     background-color: yellow;
 }

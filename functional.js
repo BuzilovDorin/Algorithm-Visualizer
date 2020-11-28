@@ -30,16 +30,43 @@ $(document).ready(function(){
             $("#algorithim-descript").empty();
             $("#algorithim-descript").append("Dijkstra's Algorithim <br></br><div class='subtext'>Assign all nodes on the grid a distance value of infinity[∞]; in relation to the start node. Assign the start node a distance value of [0]. Dijkstra's algorithm will begin by visiting the start node. Dijkstra's goal is to measure the current node's distance from the start, then update all the neighbouring nodes (Nodes: up, right, left, down) a distance value of [+1]. Pick the node with the smallest distance value to traverse next. Like you did before update its distance value and the neighbours values too. Then find the next node with the smallest distance value and traverse it. Keep repeating until you reach the end goal. <br></br></div> <div class='subtextExample'>Example: Calculating the best route through a city would be one application of Dijkstra's algorithm. Areas of high traffic can be weighted to avoid taking certain routes.</div> <button id='example_button_weighted' class='dijkstra_weighted_example'> Weighted example </button> <button id='example_button_unweighted' class='dijkstra_unweighted_example'> Unweighted example </button>");
             $("#algorithim-descript").css ( 'color', "black" )
+            return false;
         }
     })
 
     // Create and remove walls with mousemove
     mouseDrag = false;
     currentCell = null;
+    heart = null;
+    weight = null;
+    document.onkeypress = function(e) {
+        if (e.key == "w"){
+            weight = true;
+        }
+    };
+    $(document).on('keyup', function() {
+    })
+    document.onkeyrelease = function(e) {
+        heart = null;
+        weight = null;
+    };
     $(document)
     .mousedown(function(e) {
-        if ($(e.target).is(".unvisited , .wall")) {
-            $(e.target).toggleClass("unvisited wall")
+        // If shift key is pressed && W || H then...
+        if (e.shiftKey && weight == true){
+            if (!$(e.target).is("td")){
+                return false;
+            }
+            else {
+                $(e.target).removeClass();
+                $(e.target).addClass("weight-node");
+                return false;
+            }
+        }
+        // Create Wall
+        else if ($(e.target).is("td") & !$(e.target).is(".start-node") & !$(e.target).is(".end-node")) {
+            $(e.target).removeClass();
+            $(e.target).addClass("wall");
             currentCell = $(e.target).attr("id")
             mouseDrag = true
         }
@@ -49,7 +76,8 @@ $(document).ready(function(){
         if(mouseDrag ==  true) {
             if ($(e.target).attr("id") != currentCell){
                 if ($(e.target).is(".unvisited , .wall")) {
-                    $(e.target).toggleClass("unvisited wall")
+                    $(e.target).removeClass();
+                    $(e.target).addClass("unvisisted");
                     currentCell = $(e.target).attr("id")
                 }
             }
@@ -58,6 +86,7 @@ $(document).ready(function(){
     .mouseup(function(e) {
         mouseDrag = false
         currentCell = null
+        return false;
     })
 
     // Clear whole board
