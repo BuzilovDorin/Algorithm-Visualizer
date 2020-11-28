@@ -348,3 +348,6 @@ html, body {
     transform: scale(1.5);
     border-radius: 5px;
 }
+.shortest-path{
+    background-color: yellow;
+}
